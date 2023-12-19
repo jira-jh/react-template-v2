@@ -2,10 +2,10 @@
   "name": "template-react-typescript",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "start": "vite",
-    "build": "tsc && vite build",
+    "start": "NODE_ENV=DEV node env_select && vite",
+    "start_prod": "NODE_ENV=PROD node env_select && vite",
+    "build": "env-cmd -f .env.prod tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,6 +17,8 @@
     "@rematch/updated": "^2.1.2",
     "axios": "^1.3.4",
     "bootstrap": "^5.2.3",
+    "dotenv": "^16.3.1",
+    "env-cmd": "^10.1.0",
     "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
