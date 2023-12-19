@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "sukhumvit";
+    src: url("../assets/fonts/SukhumvitSet-Bold.ttf") format("truetype");
+    src: url("../assets/fonts/SukhumvitSet-Light.ttf") format("truetype");
+    src: url("../assets/fonts/SukhumvitSet-Medium.ttf") format("truetype");
+    src: url("../assets/fonts/SukhumvitSet-SemiBold.ttf") format("truetype");
+    src: url("../assets/fonts/SukhumvitSet-Text.ttf") format("truetype");
+    src: url("../assets/fonts/SukhumvitSet-Thin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "sukhumvitBold";
+    src: url("../assets/fonts/SukhumvitSet-SemiBold.ttf") format("truetype");
+}
+
+div {
+    font-family: "sukhumvit" !important;
+}
