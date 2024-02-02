@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React, { Suspense } from 'react';
 import { Routes, Route } from "react-router-dom"
 import routeLink from './route-link';
