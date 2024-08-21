@@ -1,6 +1,5 @@
-import React from 'react'
 import Header from './Header/Header'
-import Container from 'react-bootstrap/Container';
+import { Container } from '@mui/material'
 
 function MainLayout(props: any) {
 	const { components } = props

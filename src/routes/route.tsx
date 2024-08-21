@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from "react-router-dom"
 import routeLink from './route-link';
 import ProtectedRoute from '../shared/authguard.service';
@@ -13,7 +13,7 @@ const renderRoutes = (routes: any) =>
           return <Route
             key={`router-guard-${i}`}
             path={route.path}
-            element={<ProtectedRoute component={<MainLayout components={route.element}/>} />}
+            element={<ProtectedRoute component={<MainLayout components={route.element} />} />}
           />
         } else {
           return (

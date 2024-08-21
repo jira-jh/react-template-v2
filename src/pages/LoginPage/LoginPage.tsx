@@ -1,8 +1,15 @@
-import React from 'react'
-
+import { Button } from '@mui/material'
 function LoginPage() {
   return (
-    <div>LoginPage</div>
+    <>
+      <h1 className="text-xl text-center font-bold ">
+        Login Page
+      </h1>
+      <div className='flex justify-center'>
+
+        <Button >Login</Button>
+      </div>
+    </>
   )
 }
 

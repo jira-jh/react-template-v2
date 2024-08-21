@@ -1,9 +1,8 @@
-import React from 'react'
-import { Button, ButtonGroup } from 'react-bootstrap';
+import { Button } from "@mui/material"
 function MainPage() {
   return (
     <div>
-      <Button variant="primary" size="sm">ปุ่ม</Button>{' '}
+      <Button>ปุ่ม</Button>
     </div>
   )
 }
