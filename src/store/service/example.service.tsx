@@ -1,7 +1,7 @@
 import { createModel } from '@rematch/core'
 import { RootModel } from '../root.store'
 import { callGet } from '../../shared/axios.service'
-import { environment } from '../../enviroments/environment'
+import { environment } from '../../environments/environment'
 
 const { API_HOSTNAME } = environment
 
