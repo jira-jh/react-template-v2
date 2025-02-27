@@ -1,6 +1,7 @@
 import { createModel } from '@rematch/core'
 import { RootModel } from '../root.store'
-import { callPost } from '../../shared/axios.service'
+import { callPost } from '../../services/axios.service'
+import { Response } from '../../utils/ResponseModule'
 
 const DEFAULT_STATE = {
 	profile: [],
@@ -15,25 +16,31 @@ export const authentication = createModel<RootModel>()({
 	},
 	effects: (dispatch) => ({
 		async login(payload) {
+			const funcName = 'login'
 			try {
 				const response = await callPost('LOGIN URL', payload)
 				const { access, refresh } = response
-				dispatch.auth.SET_AUTH_STATE({
+				const data = {
 					accessToken: access,
 					refreshToken: refresh,
 					isAuthenticated: true
-				})
-			} catch (error) {
+				}
+				dispatch.auth.SET_AUTH_STATE(data)
+				return Response(data, false, funcName, 'Login Success')
+			} catch (error: any) {
 				console.log(error, '<--- error')
+				return Response(error.data, true, funcName, 'Login Error')
 			}
 		},
 		async logout(payload) {
+			const funcName = 'logout'
 			try {
-				const response = await callPost('LOGOUT URL')
 				dispatch.auth.SET_AUTH_STATE([])
 				window.location.href = '/login'
-			} catch (error) {
+				return Response([], false, funcName, 'Logout Success')
+			} catch (error: any) {
 				console.log(error, '<--- error')
+				return Response(error.data, true, funcName, 'Logout Error')
 			}
 		}
 	})

@@ -1,14 +1,12 @@
-import React, { lazy } from "react";
-import ProtectedRoute from "../shared/authguard.service";
-import MainLayout from "../layout/MainLayout";
-const NotFound = lazy(() => import('../pages/NotFoundPage/NotFoundPage'))
-const MainPage = lazy(() => import('../pages/MainPage/MainPage'))
-const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'))
+import { lazy } from "react";
+const NotFound = lazy(() => import('../pages/NotFoundPage'))
+const Dashboard = lazy(() => import('../pages/Dashboard'))
+const LoginPage = lazy(() => import('../pages/LoginPage'))
 
 const routeLink = [
     { path: '/login', element: <LoginPage /> },
     // AuthGuard
-    { path: '/', element: <MainPage />, guard: true },
+    { path: '/dashboard', element: <Dashboard />, guard: true },
     // Not Found Page
     { path: '*', element: <NotFound /> },
 ];

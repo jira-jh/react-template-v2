@@ -1,13 +1,12 @@
 import { Models } from '@rematch/core'
 import { authentication } from './service/auth.service'
-import { example } from './service/example.service'
-
+import { global } from './service/global.service'
 export interface RootModel extends Models<RootModel> {
 	authentication: typeof authentication
-	example: typeof example
+	global: typeof global
 }
 
 export const models: RootModel = {
 	authentication,
-	example
+	global
 }

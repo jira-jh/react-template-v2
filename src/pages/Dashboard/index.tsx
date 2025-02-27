@@ -1,5 +1,6 @@
 import { Button } from "@mui/material"
-function MainPage() {
+
+function DashboardPage() {
   return (
     <div>
       <Button>ปุ่ม</Button>
@@ -7,4 +8,4 @@ function MainPage() {
   )
 }
 
-export default MainPage
+export default DashboardPage

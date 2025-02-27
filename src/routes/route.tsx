@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
 import { Routes, Route } from "react-router-dom"
 import routeLink from './route-link';
-import ProtectedRoute from '../shared/authguard.service';
-import MainLayout from '../layout/MainLayout';
+import ProtectedRoute from '../services/authguard.service';
+import MainLayout from '../layout';
 // ------------ render  ------------
 const renderRoutes = (routes: any) =>
   <Suspense>

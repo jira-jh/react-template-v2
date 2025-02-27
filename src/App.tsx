@@ -1,6 +1,7 @@
 import Router from './routes/route';
 // Css
 import './App.css'
+import './themes/themes.scss'
 import { ThemeProvider, createTheme as createMuiTheme } from '@mui/material/styles';
 
 import { createPalette } from './themes/palette-themes';
@@ -20,6 +21,14 @@ function App() {
     shape: {
       borderRadius: 8
     },
+    typography: {
+      fontFamily: `sukhumvit`,
+      fontSize: 14,
+      fontWeightLight: 200,
+      fontWeightRegular: 300,
+      fontWeightMedium: 500,
+      fontWeightBold: 600
+    }
   });
 
 

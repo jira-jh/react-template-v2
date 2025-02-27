@@ -18,7 +18,7 @@ const axiosService = (config: IAxiosService) => {
     return axios;
 };
 
-// --------- Get ---------
+/// --------- GET ---------
 export const callGet = (url: string, params?: any) =>
     axiosService({ url })
         .get(url, { params: params })
@@ -27,7 +27,7 @@ export const callGet = (url: string, params?: any) =>
             throw error.response?.data || error;
         })
 
-// --------- Post ---------
+/// --------- Post ---------
 export const callPost = (url: string, data?: any) =>
     axiosService({ url })
         .post(url, data)
@@ -36,7 +36,7 @@ export const callPost = (url: string, data?: any) =>
             throw error.response?.data || error;
         })
 
-// --------- Put ---------
+/// --------- Put ---------
 export const callPut = (url: string, data?: any) =>
     axiosService({ url })
         .put(url, data)
@@ -45,7 +45,7 @@ export const callPut = (url: string, data?: any) =>
             throw error.response?.data || error;
         })
 
-// --------- Patch ---------
+/// --------- Patch ---------
 export const callPatch = (url: string, data?: any) =>
     axiosService({ url })
         .patch(url, data)
@@ -54,7 +54,7 @@ export const callPatch = (url: string, data?: any) =>
             throw error.response?.data || error;
         })
 
-// --------- Delete ---------
+/// --------- Delete ---------
 export const callDelete = (url: string, data?: any) =>
     axiosService({ url })
         .delete(url, data)

@@ -1,11 +1,11 @@
-import Header from './Header/Header'
+import NavbarNavigator from './Navbar/index.tsx.js'
 import { Container } from '@mui/material'
 
 function MainLayout(props: any) {
 	const { components } = props
 	return (
 		<>
-			<Header />
+			<NavbarNavigator />
 			<Container>
 				{components}
 			</Container>
